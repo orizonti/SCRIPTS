@@ -1,0 +1,25 @@
+LOCAL STORAGE: /mnt/d/STORAGE/YandexDisk
+CHECK CONNECTION TO mainpc
+REMOTE USER: broms
+mainpc IS UP; USER: broms; SYNCING: broms@mainpc:/home/broms
+sending incremental file list
+tags
+test_sync.txt
+
+sent 4,172 bytes  received 121 bytes  2,862.00 bytes/sec
+total size is 16,762,118  speedup is 3,904.52
+receiving incremental file list
+
+sent 51 bytes  received 4,065 bytes  2,744.00 bytes/sec
+total size is 16,762,118  speedup is 4,072.43
+CHECK CONNECTION TO middleserver
+REMOTE USER: orizonti
+middleserver IS UP; USER: orizonti; SYNCING: orizonti@middleserver:/home/orizonti
+sending incremental file list
+
+sent 4,060 bytes  received 50 bytes  2,740.00 bytes/sec
+total size is 16,762,118  speedup is 4,078.37
+receiving incremental file list
+
+sent 51 bytes  received 4,113 bytes  2,776.00 bytes/sec
+total size is 16,762,118  speedup is 4,025.48
