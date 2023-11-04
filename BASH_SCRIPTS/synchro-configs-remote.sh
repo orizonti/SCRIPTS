@@ -32,6 +32,7 @@ echo "============="
 #========================================
 function SYNCHRO_SESSION
 {
+echo "      -------------------------------------"
 local HOSTS=$1; 
 local LOCAL_STORAGE_DIR=$2
 echo "      SYNCHRO SESSION: STOR: [$LOCAL_STORAGE_DIR] HOSTS: [$HOSTS]"
@@ -54,8 +55,8 @@ echo "      -------------------------------------"
 
         echo "SYNC: LOCAL [$LOCAL_STORAGE_DIR] REMOTE [$REMOTE_STORAGE] : $server";
 
-        rsync -auzv $LOCAL_STORAGE/* $REMOTE_USER@$server:$REMOTE_STORAGE
-        stat=$(rsync -auz --stats $REMOTE_USER@$server:$REMOTE_STORAGE/* $LOCAL_STORAGE)
+        rsync -auzv --exclude ".git" $LOCAL_STORAGE/* $REMOTE_USER@$server:$REMOTE_STORAGE 
+        stat=$(rsync -auzv --stats --exclude ".git"  $REMOTE_USER@$server:$REMOTE_STORAGE/* $LOCAL_STORAGE)
         value=$(echo "$stat" | rg -o "transferred: \d+" | rg -o "\d+")
         FILE_TRANSFERRED=$((FILE_TRANSFERRED + value))
 
@@ -67,6 +68,7 @@ echo "      TRANSFERRED COUNT: $FILE_TRANSFERRED"
 }
 
 if [ $ACTIVE_HOSTS_COUNT -lt 1 ]; then echo "THERE IS NOT HOST TO SYNCHO, EXIT"; exit; fi
+
 
 SYNCHRO_SESSION "$ACTIVE_HOSTS" "$LOCAL_STORAGE"
 

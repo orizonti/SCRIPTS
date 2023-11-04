@@ -1,0 +1,36 @@
+[VSCODE]
+=================================
+C:\Users\broms\AppData\Roaming\Code\User\settings.json
+C:\Users\broms\AppData\Roaming\Code\User\keybindings.json
+/home/broms/.config/Code/User/setting.json
+/home/broms/.config/Code/User/keybindings.json
+=================================
+
+[NVIM]
+=================================
+WINDOWS
+C:\Users\broms\AppData\Local\nvim #CONFIG
+C:\Users\broms\AppData\Local\nvim\lua #CONFIG
+C:\Program Files\NVim #INSTALL 
+C:\Users\broms\nvim\plugged #PLUGINS
+C:\Users\broms\AppData\Local\nvim-data\site\pack\packer\start\packer.nvim #PLUGINS
+----------------------------------
+LINUX
+/home/broms/PROGRAMS/INSTALL/nvim #INSTALL
+/home/broms/plugged #PLUGINS
+/home/broms/.local/share/nvim/site/pack/packer  
+/home/broms/.config/nvim
+=================================
+
+[VIM]
+=================================
+C:\Users\broms\_vimrc
+/home/broms/_vimrc
+=================================
+
+[LINUX_CONFIGS]
+/etc/fstab
+/etc/hosts
+/etc/fuse
+~/.local/share/fonts
+/usr/local/share/fonts
